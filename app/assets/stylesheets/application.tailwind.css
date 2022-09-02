@@ -2,12 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
-/*
-
 @layer components {
-  .btn-primary {
-    @apply py-2 px-4 bg-blue-200;
+
+  .sections {
+
+  }
+
+  .section {
+    @apply bg-emerald-200 mb-2 p-2 rounded flex justify-between;
+  }
+
+  .section_actions {
+    @apply flex;
+  }
+
+  .btn {
+    @apply px-2 mx-4;
+  }
+
+  .btn_update {
+    @apply text-orange-400;
+  }
+
+  .btn_delete {
+    @apply text-red-700;
+  }
+
+  .btn_link {
+    @apply text-teal-500;
+  }
+
+  .form {
+    @apply mb-2;
+  }
+
+  .input {
+    @apply rounded p-1 border bg-slate-200;
+  }
+
+  .subs {
+    @apply mb-4 border-b;
   }
 }
-
-*/

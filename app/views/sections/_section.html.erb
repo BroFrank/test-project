@@ -1,0 +1,17 @@
+<%= turbo_frame_tag section do %>
+  <div class="section">
+    <%= link_to section.name, "#" %>
+
+    <div class="section_actions">
+      <%= link_to sanitize("&#8595;"),
+        subs_section_path(section),
+        class: "btn btn_link",
+        data: { turbo_frame: "subs_#{section.id}" }
+      %>
+      <%= link_to "Изменить", edit_section_path(section), class: "btn btn_update" %>
+      <%= button_to "Удалить", section_path(section), method: :delete, class: "btn btn_delete" %>
+    </div>
+  </div>
+
+  <%= turbo_frame_tag "subs_#{section.id}" %>
+<% end %>

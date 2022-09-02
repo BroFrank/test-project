@@ -1,0 +1,13 @@
+<%= turbo_frame_tag "subs_#{@section.id}" do %>
+  <div class="subs">
+    <%= link_to "Скрыть", root_path, class: "btn_delete" %>
+
+    <% @sub_sections.each do |sub_section| %>
+      <%= turbo_frame_tag sub_section do %>
+        <div class="section">
+          <%= link_to "- #{sub_section.name}", "#" %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+<% end %>
