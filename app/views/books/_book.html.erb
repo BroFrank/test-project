@@ -1,0 +1,8 @@
+<%= turbo_frame_tag "book_#{book.id}" do %>
+  <div class="book">
+    <%= book.name %>
+
+    <%= link_to "Изменить", edit_section_book_path(@section, book), class: "btn btn_update" %>
+    <%= button_to "Удалить", section_book_path(@section, book), method: :delete, class: "btn btn_delete" %>
+  </div>
+<% end %>

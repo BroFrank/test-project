@@ -1,10 +1,18 @@
-<div>
-  <%= link_to "Новая категория", new_section_path, class: "btn_link", data: { turbo_frame: "new_section" } %>
+<div class="content">
+  <div>
+    <%= link_to "Новая категория", new_section_path, class: "btn_link", data: { turbo_frame: "new_section" } %>
 
-  <div class="sections">
-    <%= turbo_frame_tag "new_section" %>
-    <%= turbo_frame_tag "sections" do %>
-      <%= render @sections %>
-    <% end %>
+    <div class="sections">
+      <%= turbo_frame_tag "new_section" %>
+      <%= turbo_frame_tag "sections" do %>
+        <%= render @sections %>
+      <% end %>
+    </div>
+  </div>
+
+  <div>
+    <div class="books">
+      <%= turbo_frame_tag "section_books" %>
+    </div>
   </div>
 </div>

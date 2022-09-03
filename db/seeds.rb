@@ -13,3 +13,9 @@ Section.all.each do |section|
     Section.create name: "#{section.name} подсекция #{time + 1}", parent_id: section.id
   end
 end
+
+Section.all.each do |section|
+  5.times do |time|
+    section.books.create name: "Книга из секции (#{section.name}) номер #{time + 1}"
+  end
+end

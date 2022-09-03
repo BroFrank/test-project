@@ -1,6 +1,6 @@
 <%= turbo_frame_tag section do %>
   <div class="section">
-    <%= link_to section.name, "#" %>
+    <%= link_to section.name, section_books_path(section), data: { turbo_frame: "section_books" } %>
 
     <div class="section_actions">
       <%= link_to sanitize("&#8595;"),

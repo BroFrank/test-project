@@ -5,7 +5,7 @@
     <% @sub_sections.each do |sub_section| %>
       <%= turbo_frame_tag sub_section do %>
         <div class="section">
-          <%= link_to "- #{sub_section.name}", "#" %>
+          <%= link_to "- #{sub_section.name}", section_books_path(sub_section), data: { turbo_frame: "section_books" } %>
         </div>
       <% end %>
     <% end %>

@@ -1,0 +1,14 @@
+<%= turbo_frame_tag "section_books" do %>
+  <div class="books">
+    <%= link_to "Новая книга", new_section_book_path(@section), class: "btn_link", data: { turbo_frame: "new_book" } %>
+
+    <div>
+      <%= turbo_frame_tag "new_book" %>
+      <%= turbo_frame_tag "books" do %>
+        <% @books.each do |book| %>
+          <%= render 'books/book', section: @section, book: book %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+<% end %>

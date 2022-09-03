@@ -1,0 +1,5 @@
+<%= form_with model: [@section, book], class: "form" do |f| %>
+  <%= f.text_field :name, class: "input" %>
+  <%= f.submit "Подтвердить", class: "btn btn_update" %>
+  <%= link_to "Отмена", section_books_path(@section), class: "btn btn_delete" %>
+<% end %>

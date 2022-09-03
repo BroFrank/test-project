@@ -4,6 +4,10 @@
 
 @layer components {
 
+  .content {
+    @apply flex flex-row justify-between;
+  }
+
   .sections {
 
   }
@@ -42,5 +46,13 @@
 
   .subs {
     @apply mb-4 border-b;
+  }
+
+  .books {
+    @apply ml-4;
+  }
+
+  .book {
+    @apply bg-emerald-200 mb-2 p-2 rounded flex justify-between;
   }
 }
